@@ -36,6 +36,7 @@ TEMPLATE_PAGES = {
 
 SITE_TITLE = "pages.charlesreid1.com"
 SITE_DESCRIPTION = "a subdomain for charlesreid1 pages"
+GITEA_URL = "https://git.charlesreid1.com/charlesreid1/pages.charlesreid1.com"
 
 # ---
 
@@ -71,81 +72,23 @@ See below for examples of Twitter bot flocks.</p>
 <p>Each bot has a home page on bots.charlesreid1.com; see below for links.</p>
 """
 
+
 # ---
 
-# include <p> tags in the description
 
-def make_links_description():
-    descr = ""
-
-    botlinks = {
-            'twitter' : {
-                'Apollo Space Junk Bot Flock' : 'https://twitter.com/charlesreid1/lists/space-junk-botflock',
-                'Paradise Lost Bot Flock' :     'https://twitter.com/charlesreid1/lists/miltonbotflock',
-                'Ginsberg Bot Flock' :          'https://twitter.com/charlesreid1/lists/ginsbergbotflock',
-                'Math Tripos Bot' :             'https://twitter.com/math_tripos'
-            },
-
-            'git.charlesreid1.com' : {
-                'Rainbow Mind Machine' :        'https://git.charlesreid1.com/bots/b-rainbow-mind-machine',
-                'Apollo Space Junk Bot Flock' : 'https://git.charlesreid1.com/bots/b-apollo',
-                'Paradise Lost Bot Flock' :     'https://git.charlesreid1.com/bots/b-milton',
-                'Ginsberg Bot Flock' :          'https://git.charlesreid1.com/bots/b-ginsberg',
-                'Math Tripos Bot' :             'https://git.charlesreid1.com/bots/b-tripos'
-            },
-
-            'pages.charlesreid1.com' : {
-                'Rainbow Mind Machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
-                'Apollo Space Junk Bot Flock' : 'https://pages.charlesreid1.com/apollo',
-                'Paradise Lost Bot Flock' :     'https://pages.charlesreid1.com/milton',
-                'Ginsberg Bot Flock' :          'https://pages.charlesreid1.com/ginsberg',
-                'Math Tripos Bot' :             'https://pages.charlesreid1.com/tripos'
-            },
-
-            'github (mirror)' : {
-                'Rainbow Mind Machine' :        'https://github.com/charlesreid1/rainbow-mind-machine',
-                'Apollo Space Junk Bot Flock' : 'https://github.com/charlesreid1/apollospacejunk',
-                'Paradise Lost Bot Flock' :     'https://github.com/charlesreid1/milton',
-                'Ginsberg Bot Flock' :          'https://github.com/charlesreid1/ginsberg',
-                'Math Tripos Bot' :             'https://github.com/charlesreid1/tripos-bot'
-            },
-
-            'github pages (mirror)' : {
-                'Rainbow Mind Machine' :        'https://charlesreid1.github.io/rainbow-mind-machine',
-                'Apollo Space Junk Bot Flock' : 'https://charlesreid1.github.io/apollospacejunk',
-                'Paradise Lost Bot Flock' :     'https://charlesreid1.github.io/milton',
-                'Ginsberg Bot Flock' :          'https://charlesreid1.github.io/ginsberg',
-                'Math Tripos Bot' :             'https://charlesreid1.github.io/tripos-bot'
-            }
-
-    }
-
-    fa_icons = {
-            'twitter' : '<i class="fa fa-twitter fa-fw"></i>',
-            'git.charlesreid1.com' : '<i class="fa fa-code-fork fa-fw"></i>',
-            'pages.charlesreid1.com' : '<i class="fa fa-file-o fa-fw"></i>',
-            'github (mirror)' : '<i class="fa fa-github fa-fw"></i>',
-            'github pages (mirror)' : '<i class="fa fa-github-square fa-fw"></i>'
-    }
-
-    for key in botlinks.keys():
-        descr += "<h3>charlesreid1 bots on %s:<h3>\n\n"%(key)
-        fa_icon = fa_icons[key]
-
-        links = botlinks[key]
-        for bot_name in links.keys():
-            bot_link = links[bot_name]
-            descr += "<p><a class=\"btn btn-default btn-lg\" href=\"%s\">"%(bot_link)
-            descr += "%s %s"%(fa_icon, bot_name)
-            descr += "</a></p>\n"
-        
-        descr += "\n"
-
-    return descr
+pages = {
+    'rainbow-mind-machine' :    'https://pages.charlesreid1.com/rainbow-mind-machine',
+    'apollo' :                  'https://pages.charlesreid1.com/apollo',
+    'ginsberg' :                'https://pages.charlesreid1.com/ginsberg',
+    'milton' :                  'https://pages.charlesreid1.com/milton',
+    'tripos-bot' :              'https://pages.charlesreid1.com/tripos-bot'
+}
 
 LINKS_TITLE = "bot links"
 
-LINKS_DESCRIPTION = make_links_description()
+LINKS_DESCRIPTION = """
+'pages.charlesreid1.com' : '<i class="fa fa-file-o fa-fw"></i>',
+"""
 
 
 # ---
