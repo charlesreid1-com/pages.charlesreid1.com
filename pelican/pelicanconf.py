@@ -76,19 +76,35 @@ See below for examples of Twitter bot flocks.</p>
 # ---
 
 
-pages = {
-    'rainbow-mind-machine' :    'https://pages.charlesreid1.com/rainbow-mind-machine',
-    'apollo' :                  'https://pages.charlesreid1.com/apollo',
-    'ginsberg' :                'https://pages.charlesreid1.com/ginsberg',
-    'milton' :                  'https://pages.charlesreid1.com/milton',
-    'tripos-bot' :              'https://pages.charlesreid1.com/tripos-bot'
-}
+def make_pages():
+    descr = ""
 
-LINKS_TITLE = "bot links"
+    pages = {
+        'rainbow-mind-machine' :    'https://pages.charlesreid1.com/rainbow-mind-machine',
+        'apollo' :                  'https://pages.charlesreid1.com/apollo',
+        'ginsberg' :                'https://pages.charlesreid1.com/ginsberg',
+        'milton' :                  'https://pages.charlesreid1.com/milton',
+        'tripos-bot' :              'https://pages.charlesreid1.com/tripos-bot'
+    }
 
-LINKS_DESCRIPTION = """
-'pages.charlesreid1.com' : '<i class="fa fa-file-o fa-fw"></i>',
-"""
+    descr += "<h3>charlesreid1 pages</h3>"
+    fa_pages = '<i class="fa fa-globe fa-fw fa-2x"></i>'
+    for page in pages.keys():
+        url = pages[page]
+
+        descr += "<p><a class=\"btn btn-default btn-lg\" href=\"%s\">"%(url)
+        descr += "%s %s"%(fa_pages, page)
+        descr += "</a></p>\n"
+
+    descr += "\n"
+
+    return descr
+
+
+
+LINKS_TITLE = "charlesreid1 pages"
+
+LINKS_DESCRIPTION = make_pages()
 
 
 # ---
