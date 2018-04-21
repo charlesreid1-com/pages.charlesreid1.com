@@ -25,7 +25,7 @@ TEMPLATE_PAGES = {
     'custom.css' : 'custom.css'
 }
 
-INTROBKG='theme/img/intro-bg-mist.jpg'
+INTROBKG='theme/img/intro-bg-original.jpg'
 LINKSBKG='theme/img/links-bg-streetlamp.jpg'
 
 
