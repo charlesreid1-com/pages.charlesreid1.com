@@ -3,15 +3,10 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'charlesreid1'
-
 SITENAME = u'charlesreid1 pages'
-
 SITEURL = ''
-
 PATH = 'content'
-
 TIMEZONE = 'America/Los_Angeles'
-
 DEFAULT_LANG = u'en'
 
 # --------------8<---------------------
@@ -30,6 +25,14 @@ TEMPLATE_PAGES = {
     'custom.css' : 'custom.css'
 }
 
+INTROBKG='theme/img/intro-bg-mist.jpg'
+LINKSBKG='theme/img/links-bg-streetlamp.jpg'
+
+
+# img/ should be in content/
+# available at <url>/img
+STATIC_PATHS = ['img']
+
 # ---
 
 # description appears between <p> tags, so don't include them
@@ -42,36 +45,56 @@ GITEA_URL = "https://git.charlesreid1.com/charlesreid1/pages.charlesreid1.com"
 
 # include <p> tags in the description
 
+ABOUT_SHORT = "About"
+
 ABOUT_TITLE = "about pages.charlesreid1.com"
 
 ABOUT_DESCRIPTION = """
 <p>
-<a href="https://git.charlesreid1.com/bots">bots on git.charlesreid1.com</a>
+pages.charlesreid1.com is a static site-hosting deployment solution provided by
+<a href="https://git.charlesreid1.com/">git.charlesreid1.com</a>.
 </p>
 
 <p>&nbsp;</p>
 
-<p><b>What is a bot?</b></p>
+<p><b>What is a static site?</b></p>
 
-<p>Broadly, a bot is an autonomous entity that executes a program.<br />
-The bots on this site are principally Twitter bot flocks.<br />
-Also see <a href="https://twitter.com/horse_ebooks">@horse_ebooks</a>.</p>
+<p>A static site is just a pile of static HTML, Javascript, CSS, and other files
+that can be sent over to the host, and the host can render everything on their end.
+(Compare with a dynamic site, which uses a language like PHP that requires the 
+server to do the computations.)
+</p>
+
+<p><b>What does pages.charlesreid1.com provide?</b></p>
+
+<p>This provides a subdomain for hosting static sites associated with the repositories in 
+<a href="https://git.charlesreid1.com">git.charlesreid1.com</a>.
+</p>
+
+<p>It is a private, self-hosted solution that offers much of the same thing as what 
+<a href="https://pages.github.com/">Github Pages</a> 
+(or simple <a href="https://heroku.com/">Heroku</a> projects) offer.
+</p>
 
 <p>&nbsp;</p>
 
-<p><b>What is a bot flock?</b></p>
+<p><b>How is it hosted?</b></p>
 
-<p>A bot flock is a group of Twitter bots that perform a related task,
-access related data, or otherwise share some structure.<br />
-See below for examples of Twitter bot flocks.</p>
+<p>This uses nginx, a fast, reliable, and easily-configurable web server.
+The server with the static content is reverse-proxied by the frontend
+server, which establishes secure connections and owns all of the 
+SSL certificates.
+</p>
 
 <p>&nbsp;</p>
 
-<p><b>Where can I find the bots?</b></p>
+<p><b>Who is this for?</b></p>
 
-<p>Each bot has a home page on bots.charlesreid1.com; see below for links.</p>
+<p>Pages can only be created/modified by users of <a href="https://git.charlesreid1.com">git.charlesreid1.com</a>
+(i.e., me). They can be viewed by anyone (i.e., you).
+</p>
+
 """
-
 
 # ---
 
