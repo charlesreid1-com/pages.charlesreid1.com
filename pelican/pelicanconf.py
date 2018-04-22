@@ -25,8 +25,8 @@ TEMPLATE_PAGES = {
     'custom.css' : 'custom.css'
 }
 
-INTROBKG='theme/img/intro-bg-original.jpg'
-LINKSBKG='theme/img/links-bg-streetlamp.jpg'
+INTROBKG='theme/img/intro-bg-foyer.jpg'
+LINKSBKG='theme/img/links-bg-books.jpg'
 
 
 # img/ should be in content/
