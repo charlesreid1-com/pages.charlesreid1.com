@@ -103,11 +103,19 @@ def make_pages():
     descr = ""
 
     pages = {
-        'rainbow-mind-machine' :    'https://pages.charlesreid1.com/rainbow-mind-machine',
-        'apollo' :                  'https://pages.charlesreid1.com/apollo',
-        'ginsberg' :                'https://pages.charlesreid1.com/ginsberg',
-        'milton' :                  'https://pages.charlesreid1.com/milton',
-        'tripos-bot' :              'https://pages.charlesreid1.com/tripos-bot'
+            'git-commit-ectomy' :       'https://pages.charlesreid1.com/git-commit-ectomy',
+            'rainbow-mind-machine' :    'https://pages.charlesreid1.com/rainbow-mind-machine',
+            'b-captain-hook' :          'https://pages.charlesreid1.com/b-captain-hook',
+            'pod-charlesreid1' :        'https://pages.charlesreid1.com/pod-charlesreid1',
+            'pod-bots' :                'https://pages.charlesreid1.com/pod-bots',
+            'd-gitea' :                 'https://pages.charlesreid1.com/d-gitea',
+            'd-mediawiki' :             'https://pages.charlesreid1.com/d-mediawiki',
+            'd-mysql' :                 'https://pages.charlesreid1.com/d-mysql',
+            'd-nginx-charlesreid1' :    'https://pages.charlesreid1.com/d-nginx-charlesreid1',
+            'd-nginx-subdomains' :      'https://pages.charlesreid1.com/d-nginx-subdomains',
+            'd-phpmyadmin' :            'https://pages.charlesreid1.com/d-phpmyadmin',
+            'd-python-files' :          'https://pages.charlesreid1.com/d-python-files',
+            'd-python-helium' :         'https://pages.charlesreid1.com/d-python-helium',
     }
 
     descr += "<h3>charlesreid1 pages</h3>"
