@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import markdown
 
 AUTHOR = u'charlesreid1'
 SITENAME = u'charlesreid1 pages'
@@ -28,7 +29,6 @@ TEMPLATE_PAGES = {
 INTROBKG='theme/img/intro-bg-foyer.jpg'
 LINKSBKG='theme/img/links-bg-books.jpg'
 
-
 # img/ should be in content/
 # available at <url>/img
 STATIC_PATHS = ['img']
@@ -43,58 +43,58 @@ GITEA_URL = "https://git.charlesreid1.com/charlesreid1/pages.charlesreid1.com"
 
 # ---
 
-# include <p> tags in the description
+about_md = markdown.Markdown(extensions=['extra','codehilite'],
+                             output_format='html4')
 
 ABOUT_SHORT = "About"
 
 ABOUT_TITLE = "about pages.charlesreid1.com"
 
-ABOUT_DESCRIPTION = """
-<p>
+ABOUT_TEXT = """
+
 pages.charlesreid1.com is a static site-hosting deployment solution provided by
-<a href="https://git.charlesreid1.com/">git.charlesreid1.com</a>.
-</p>
+[git.charlesreid1.com](https://git.charlesreid1.com).
 
-<p>&nbsp;</p>
+<br />
 
-<p><b>What is a static site?</b></p>
+**What is a static site?**
 
-<p>A static site is just a pile of static HTML, Javascript, CSS, and other files
+A static site is just a pile of static HTML, Javascript, CSS, and other files
 that can be sent over to the host, and the host can render everything on their end.
 (Compare with a dynamic site, which uses a language like PHP that requires the 
 server to do the computations.)
+
+<br />
+
+**What does pages.charlesreid1.com provide?**
+
+This provides a subdomain for hosting static sites associated with the repositories in 
+[git.charlesreid1.com](https://git.charlesreid1.com).
 </p>
 
-<p><b>What does pages.charlesreid1.com provide?</b></p>
+It is a private, self-hosted solution that offers much of the same thing as what 
+[Github Pages](https://pages.github.com)
+(or simple [Heroku](https://heroku.com/) projects) offer.
 
-<p>This provides a subdomain for hosting static sites associated with the repositories in 
-<a href="https://git.charlesreid1.com">git.charlesreid1.com</a>.
-</p>
+<br />
 
-<p>It is a private, self-hosted solution that offers much of the same thing as what 
-<a href="https://pages.github.com/">Github Pages</a> 
-(or simple <a href="https://heroku.com/">Heroku</a> projects) offer.
-</p>
+**How is it hosted?**
 
-<p>&nbsp;</p>
-
-<p><b>How is it hosted?</b></p>
-
-<p>This uses nginx, a fast, reliable, and easily-configurable web server.
+This uses nginx, a fast, reliable, and easily-configurable web server.
 The server with the static content is reverse-proxied by the frontend
 server, which establishes secure connections and owns all of the 
 SSL certificates.
-</p>
 
-<p>&nbsp;</p>
+<br />
 
-<p><b>Who is this for?</b></p>
+**Who is this for?**
 
-<p>Pages can only be created/modified by users of <a href="https://git.charlesreid1.com">git.charlesreid1.com</a>
+Pages can only be created/modified by users of <a href="https://git.charlesreid1.com">git.charlesreid1.com</a>
 (i.e., me). They can be viewed by anyone (i.e., you).
-</p>
-
 """
+
+ABOUT_DESCRIPTION = about_md.convert(ABOUT_TEXT)
+
 
 # ---
 
