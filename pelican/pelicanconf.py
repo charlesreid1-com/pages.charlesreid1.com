@@ -109,7 +109,7 @@ def make_pages():
 
             'git-commit-ectomy' :       'https://pages.charlesreid1.com/git-commit-ectomy',
 
-            'rainbow-mind-machine' :        'https://pages.charlesreid1.com/b-rainbow-mind-machine',
+            'rainbow-mind-machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
             'russian-rainbow-mind-machine': 'https://pages.charlesreid1.com/russian-rainbow-mind-machine',
 
             'b-apollo' :                'https://pages.charlesreid1.com/b-apollo',
