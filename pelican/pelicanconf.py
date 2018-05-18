@@ -103,11 +103,23 @@ def make_pages():
     descr = ""
 
     pages = {
+            'how-do-i-pelican' :        'https://pages.charlesreid1.com/how-do-i-pelican',
+            'how-do-i-pandoc' :         'https://pages.charlesreid1.com/how-do-i-pandoc',
+            'dont-sudo-pip' :           'https://pages.charlesreid1.com/dont-sudo-pip',
+
             'git-commit-ectomy' :       'https://pages.charlesreid1.com/git-commit-ectomy',
+
+            'rainbow-mind-machine' :        'https://pages.charlesreid1.com/b-rainbow-mind-machine',
+            'russian-rainbow-mind-machine': 'https://pages.charlesreid1.com/russian-rainbow-mind-machine',
+
+            'b-apollo' :                'https://pages.charlesreid1.com/b-apollo',
+            'b-ginsberg' :              'https://pages.charlesreid1.com/b-ginsberg',
+            'b-milton' :                'https://pages.charlesreid1.com/b-milton',
+            'b-captain-hook' :          'https://pages.charlesreid1.com/b-captain-hook',
+
             'pod-charlesreid1' :        'https://pages.charlesreid1.com/pod-charlesreid1',
             'pod-bots' :                'https://pages.charlesreid1.com/pod-bots',
-            'rainbow-mind-machine' :    'https://pages.charlesreid1.com/b-rainbow-mind-machine',
-            'b-captain-hook' :          'https://pages.charlesreid1.com/b-captain-hook',
+
             'd-gitea' :                 'https://pages.charlesreid1.com/d-gitea',
             'd-mediawiki' :             'https://pages.charlesreid1.com/d-mediawiki',
             'd-mysql' :                 'https://pages.charlesreid1.com/d-mysql',
