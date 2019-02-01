@@ -80,7 +80,7 @@ It is a private, self-hosted solution that offers much of the same thing as what
 
 **How is it hosted?**
 
-This uses nginx, a fast, reliable, and easily-configurable web server.
+This uses [nginx](https://nginx.org/en/), a fast, reliable, and easily-configurable web server.
 The server with the static content is reverse-proxied by the frontend
 server, which establishes secure connections and owns all of the 
 SSL certificates.
@@ -103,22 +103,32 @@ def make_pages():
     descr = ""
 
     pages = {
-            'how-do-i-pelican' :        'https://pages.charlesreid1.com/how-do-i-pelican',
-            'how-do-i-pandoc' :         'https://pages.charlesreid1.com/how-do-i-pandoc',
-            'dont-sudo-pip' :           'https://pages.charlesreid1.com/dont-sudo-pip',
+            'how-do-i-pelican' :   'https://pages.charlesreid1.com/how-do-i-pelican',
+            'how-do-i-pandoc' :    'https://pages.charlesreid1.com/how-do-i-pandoc',
+            'how-do-i-pyenv' :     'https://pages.charlesreid1.com/how-do-i-pyenv',
+            'how-do-i-snakemake' : 'https://pages.charlesreid1.com/how-do-i-snakemake',
 
-            'git-commit-ectomy' :       'https://pages.charlesreid1.com/git-commit-ectomy',
+            'dont-sudo-pip' :      'https://pages.charlesreid1.com/dont-sudo-pip',
+
+            'git-commit-ectomy' :  'https://pages.charlesreid1.com/git-commit-ectomy',
+            'git-subway-maps' :    'https://pages.charlesreid1.com/git-subway-maps',
+            'github-heroku-attack-rabbits' : 'https://pages.charlesreid1.com/github-heroku-attack-rabbits',
 
             'rainbow-mind-machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
             'russian-rainbow-mind-machine': 'https://pages.charlesreid1.com/russian-rainbow-mind-machine',
+            'boring-mind-machine' :         'https://pages.charlesreid1.com/boring-mind-machine',
+            'embarcadero-mind-machine' :    'https://pages.charlesreid1.com/embarcadero-mind-machine',
+            'cheeseburger-mind-machine' :   'https://pages.charlesreid1.com/cheeseburger-mind-machine',
+            'papyrus-mind-machine' :        'https://pages.charlesreid1.com/papyrus-mind-machine',
 
             'b-apollo' :                'https://pages.charlesreid1.com/b-apollo',
+            'b-captain-hook' :          'https://pages.charlesreid1.com/b-captain-hook',
             'b-ginsberg' :              'https://pages.charlesreid1.com/b-ginsberg',
             'b-milton' :                'https://pages.charlesreid1.com/b-milton',
-            'b-captain-hook' :          'https://pages.charlesreid1.com/b-captain-hook',
 
             'pod-charlesreid1' :        'https://pages.charlesreid1.com/pod-charlesreid1',
             'pod-bots' :                'https://pages.charlesreid1.com/pod-bots',
+            'pod-webhooks':             'https://pages.charlesreid1.com/pod-webhooks',
 
             'd-gitea' :                 'https://pages.charlesreid1.com/d-gitea',
             'd-mediawiki' :             'https://pages.charlesreid1.com/d-mediawiki',
@@ -128,9 +138,12 @@ def make_pages():
             'd-phpmyadmin' :            'https://pages.charlesreid1.com/d-phpmyadmin',
             'd-python-files' :          'https://pages.charlesreid1.com/d-python-files',
             'd-python-helium' :         'https://pages.charlesreid1.com/d-python-helium',
+
+            'search-demo-mkdocs-material' : 'https://pages.charlesreid1.com/search-demo-mkdocs-material',
+            'translate-yer-docs' : 'https://pages.charlesreid1.com/translate-yer-docs',
+            'wisko-manual' : 'https://pages.charlesreid1.com/wisko'
     }
 
-    descr += "<h3>charlesreid1 pages</h3>"
     fa_pages = '<i class="fa fa-globe fa-fw fa-2x"></i>'
     for page in pages.keys():
         url = pages[page]
