@@ -1,0 +1,50 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Git Map</title>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery.subwayMap-0.5.0.js"></script>
+    <link href="subway.css" rel="stylesheet">
+    <link href="two_branches.css" rel="stylesheet">
+</head>
+<body>
+    <div class="subway-map" data-columns="15" data-rows="10" data-cellSize="45"
+        data-legendId="legend" data-textClass="text" data-gridNumbers="true"
+        data-grid="false" data-lineWidth="8">
+
+        <ul data-color="#00edac" data-label="master">
+            <li data-coords="2,5" data-labelPos="W" data-marker="interchange">c384c87</li>  
+            <li data-coords="3,5" data-labelPos="N">13c4011</li>
+            <li data-coords="4,5">f5cede7</li>
+            <li data-coords="5,4" data-labelPos="N">f0f0ef6</li>
+            <li data-coords="6,4">8c0cb2c</li>
+            <li data-coords="7,4" data-labelPos="N">18a3d79</li>
+            <li data-coords="8,4">457d019</li>
+        </ul>
+
+        <ul data-color="#ac00ed" data-label="bugfix">
+            <li data-coords="5,4" data-labelPos="N" data-marker="interchange"></li>
+            <li data-coords="6,3" data-labelPos="N">bb1341a</li>
+            <li data-coords="8,3" data-labelPos="N">ef86851</li>
+            <li data-coords="10,3" data-labelPos="N">a88eef0</li>
+            <li data-coords="12,3" data-labelPos="N">11510b2</li>
+        </ul>
+
+        <ul data-color="#00aced" data-label="feature">
+            <li data-coords="4,5">f5cede7</li>
+            <li data-coords="5,6" data-dir="S">c384c87</li>  
+            <li data-coords="6,6" data-dir="N" data-labelPos="N">57de4f4</li>
+            <li data-coords="7,6" data-dir="E">2576472</li>
+            <li data-coords="8,6" data-labelPos="N">13c4011</li>
+            <li data-coords="9,6">e5e8a5f</li>
+            <li data-coords="10,6" data-labelPos="N">ab317eb</li>
+            <li data-coords="11,6">01cd690</li>
+            <li data-coords="12,6" data-labelPos="N">33876fb</li>
+        </ul>
+
+    </div>
+    <div id="legend"></div>
+    <script type="text/javascript">
+        $(".subway-map").subwayMap({ debug: true });
+    </script>
+</body>
+</html>

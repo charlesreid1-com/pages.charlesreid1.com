@@ -1,0 +1,1099 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://pages.charlesreid1.com/git-commit-ectomy/branches/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="..">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>Complications: Dealing with Branches - git-commit-ectomy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#fb8c00">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#table-of-contents" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://pages.charlesreid1.com/git-commit-ectomy/" title="git-commit-ectomy" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">announcement</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                git-commit-ectomy
+              </span>
+              <span class="md-header-nav__topic">
+                Complications: Dealing with Branches
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://git.charlesreid1.com/charlesreid1/git-commit-ectomy" title="Go to repository" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      charlesreid1/git-commit-ectomy
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://pages.charlesreid1.com/git-commit-ectomy/" title="git-commit-ectomy" class="md-nav__button md-logo">
+      
+        <i class="md-icon">announcement</i>
+      
+    </a>
+    git-commit-ectomy
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://git.charlesreid1.com/charlesreid1/git-commit-ectomy" title="Go to repository" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      charlesreid1/git-commit-ectomy
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../easy/" title="Git-Commit-Ectomy the Easy Way: Single Branch" class="md-nav__link">
+      Git-Commit-Ectomy the Easy Way: Single Branch
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Complications: Dealing with Branches" class="md-nav__link md-nav__link--active">
+      Complications: Dealing with Branches
+    </a>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../transplant/" title="Performing Transplants with Patch" class="md-nav__link">
+      Performing Transplants with Patch
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ohfk/" title="Oh F&!k: Please Send Backup" class="md-nav__link">
+      Oh F&!k: Please Send Backup
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p>This page walks through a demonstration
+git-commit-ectomy that you can perform
+starting with an empty git repository.</p>
+<p>It addresses the <strong>multi-branch case</strong>.</p>
+<p><img alt="Painting: Morton and the First Use of Ether (Hinkley 1893)." src="../img/william-morton-first-use-ether.jpg" /></p>
+<p><br />
+<br /></p>
+<h1 id="table-of-contents">table of contents</h1>
+<ul>
+<li><a href="#requirements">requirements</a></li>
+<li><a href="#consult-with-your-doctor">consult with your doctor</a></li>
+<li><a href="#an-ascii-art-crash-course-in-surgery">an ascii art crash course in surgery</a></li>
+<li><a href="#demo-surgery-setup">demo surgery: setup</a><ul>
+<li><a href="#create-initial-shared-commit-history">create initial shared commit history</a></li>
+<li><a href="#create-multiple-branches">create multiple branches</a></li>
+</ul>
+</li>
+<li><a href="#demo-surgery-procedure">demo surgery: procedure</a><ul>
+<li><a href="#git-forget-blob-cat_branch1-branch-specific-history">git forget blob: cat_branch1 (branch specific history)</a></li>
+<li><a href="#git-forget-blob-cat-shared-history">git forget blob: cat (shared history)</a></li>
+<li><a href="#forget-blob-in-one-branch">forget blob in one branch</a></li>
+<li><a href="#prepare-for-rebase-by-tagging-commits">prepare for rebase by tagging commits</a></li>
+<li><a href="#perform-rebase-operation">perform rebase operation</a></li>
+<li><a href="#stitch-the-patient-back-up">stitch the patient back up</a></li>
+</ul>
+</li>
+<li><a href="#tips-for-surgery">tips for surgery</a></li>
+</ul>
+<p><br />
+<br /></p>
+<h1 id="requirements">requirements</h1>
+<p>Before you begin, read through the <a href="../easy/">Easy Way</a>
+(even if it does not apply to your case) so that you
+are familiar with how the process works. This page
+will cover a slightly more complicated git-commit-ectomy.</p>
+<h1 id="consult-with-your-doctor">consult with your doctor</h1>
+<p>You should consult with your doctor to determine if a 
+git-commit-ectomy is right for you.</p>
+<p>This one-liner lists the 40 largest files in the repo:</p>
+<pre><code>git rev-list --all --objects | \
+     sed -n $(git rev-list --objects --all | \
+     cut -f1 -d' ' | \
+     git cat-file --batch-check | \
+     grep blob | \
+     sort -n -k 3 | \
+     \
+     tail -n40 | \
+     \
+     while read hash type size; do
+          echo -n &quot;-e s/$hash/$size/p &quot;;
+     done) | \
+     sort -n -r -k1 
+</code></pre>
+
+<h1 id="an-ascii-art-crash-course-in-surgery">an ascii art crash course in surgery</h1>
+<p>Suppose our patient has a particularly painful 
+and unnaturally large commit located in their
+multi-branch commit history:</p>
+<pre><code>            This is the commit
+             to be &quot;ectomied&quot;
+             \/
+             __
+    o---o---(__)---o---o--------o---o---o  branch A
+                        \        
+                         \---o---o---o  branch B
+                          \   
+                           o---o---o  branch C
+</code></pre>
+
+<p>The commit is first fixed on one of the branches,
+creating a new history. However, the other branches
+still require the old history to be retained:</p>
+<pre><code>                     This commit is the last
+                      commit shared by the history
+                       of each of the branches
+                       \/
+
+          ----o----o---o   new (shared) history
+         /              \
+        |                -------o---o---o  branch A
+        |     __
+    o---o----(__)----o---o       old (shared) history
+                          \        
+                           \---o---o---o  branch B
+                            \   
+                             o---o---o  branch C
+
+</code></pre>
+
+<p>The second step of the procedure is to rebase
+branch B and branch C onto the new history.
+The rebase command requires three pieces of
+information:</p>
+<ul>
+<li>The source commit (where to cut)</li>
+<li>The destination commit (where to graft)</li>
+<li>The branch name (how much to cut and graft)</li>
+</ul>
+<p>Let us label the diagram above with the rebase
+source and destination commits, and use valid
+git branch names:</p>
+<pre><code>          ----o----o---o   rebase_dest
+         /              \
+        |                -------o---o---o  branchA
+        |
+        |     __
+    o---o----(__)----o---o   rebase_src 
+                          \        
+                           \---o---o---o  branchB
+                            \   
+                             o---o---o  branchC
+</code></pre>
+
+<p>Now the commands to rebase branch B and branch C are:</p>
+<pre><code>git rebase --onto rebase_dest rebase_src branchB
+git rebase --onto rebase_dest rebase_src branchC
+</code></pre>
+
+<p>The commit history that results will look like the following:</p>
+<pre><code>          ----o----o---o
+         /              \
+        |                \-----o---o---o  branchA
+        |                 \    
+    o----                  \--o---o---o  branchB
+                            \ 
+                             o---o---o  branchC
+</code></pre>
+
+<h1 id="demo-surgery-setup">demo surgery: setup</h1>
+<p>To set up the demo surgery, we will start by
+creating a single branch with commits that 
+are shared history between multiple branches.</p>
+<p>Next, we create several branches with their
+own commits not shared with other branches.</p>
+<p>We want to show how to remove large files from
+both the shared history of multiple branches,
+and from a single branch's history.</p>
+<h2 id="create-initial-shared-commit-history">create initial shared commit history</h2>
+<p>Clone an example repo for performing surgery. You don't <em>need</em>
+a remote repository to do the demo surgery, but we will use one
+in our walkthrough.</p>
+<pre><code>git clone https://github.com/charlesreid1/git-commit-ectomy-example
+cd git-commit-ectomy-example
+</code></pre>
+
+<p>In this example we will create a branch called <code>branch1</code> instead of
+using the default <code>master</code> branch. Start by renaming the <code>master</code> branch
+to <code>branch1</code>:</p>
+<pre><code>git branch branch1
+git checkout branch1
+</code></pre>
+
+<p>Start with several text files, and add them to the repo history:</p>
+<pre><code>echo &quot;hello foo&quot; &gt; foo.txt
+echo &quot;hello bar&quot; &gt; bar.txt
+
+for item in `/bin/ls -1 *.txt`; do
+    git add ${item} &amp;&amp; git commit ${item} -m &quot;adding ${item}&quot;
+done
+</code></pre>
+
+<p>Now add several large files to the repo history:</p>
+<pre><code>mkdir data1; mkdir data2
+</code></pre>
+
+<p>Now create some files in each of the two directories:</p>
+<pre><code>cd data1/
+dd if=/dev/urandom of=bat bs=1048576 count=10
+dd if=/dev/urandom of=cat bs=1048576 count=10
+dd if=/dev/urandom of=dat bs=1048576 count=10
+cd ../
+
+
+cd data2/
+dd if=/dev/urandom of=fat bs=1048576 count=10
+dd if=/dev/urandom of=rat bs=1048576 count=10
+cd ../
+</code></pre>
+
+<p>This gives the following directory structure:</p>
+<pre><code>$ tree .
+.
+├── bar.txt
+├── data1
+│   ├── bat
+│   ├── cat
+│   └── dat
+├── data2
+│   ├── fat
+│   └── rat
+└── foo.txt
+</code></pre>
+
+<p>Add the files to the repo in <em>separate commits</em>:</p>
+<pre><code>for item in data1/bat data1/cat data1/dat data2/fat data2/rat; do
+    git add ${item} &amp;&amp; git commit ${item} -m &quot;adding ${item}&quot;
+done
+</code></pre>
+
+<p>At this point the git log should look like this:</p>
+<pre><code>$ git log --oneline
+859fb5d (branch1) adding rat
+7d104ee adding fat
+ddf2903 adding dat
+765708d adding cat
+4c9f26f adding bat
+3b92007 adding bar.txt
+c2daf61 adding foo.txt
+</code></pre>
+
+<p>(So far, this is identical to the single-branch setup.)</p>
+<h2 id="create-multiple-branches">create multiple branches</h2>
+<p>Commit <code>859fb5d</code> (where we added the file <code>rat</code>) is the
+last commit that is shared among the history of the three
+branches we will create.</p>
+<p>We start by checking out a particular commit and
+creating each branch; this is equivalent to tagging
+the commit <code>859fb5d</code> with three labels, <code>branch1</code>,
+<code>branch2</code>, and <code>branch3</code>.</p>
+<p>Next we add different files to the different branches.
+Here is the directory structure we will create:</p>
+<pre><code>Branch 1               Branch 2               Branch 3                    
+-------------------    --------------------   ----------------------      
+
+.                      .                      .                           
+├── bar.txt            ├── bar.txt            ├── bar.txt                 
+├── foo.txt            ├── foo.txt            ├── foo.txt                 
+├── data1              ├── data1              ├── data1                   
+│   ├── bat            │   ├── bat            │   ├── bat                 
+│   ├── cat            │   ├── cat            │   ├── cat                 
+│   └── dat            │   └── dat            │   └── dat                 
+├── data2              ├── data2              ├── data2                   
+│   ├── fat            │   ├── fat            │   ├── fat                 
+│   └── rat            │   └── rat            │   └── rat                 
+│                      │                      │
+└── branch1_data       └── branch2_data       └── branch3_data             
+    ├── branch1.txt        ├── branch2.txt        ├── branch3.txt         
+    ├── bat_branch1        ├── bat_branch2        ├── bat_branch3         
+    └── cat_branch1        └── cat_branch2        └── cat_branch3         
+</code></pre>
+
+<p>Here are the commands to create the branch-specific 
+files and directories:</p>
+<pre><code>git branch branch1; git branch branch2; git branch branch3
+for BRANCH in branch1 branch2 branch3; do
+
+    git checkout ${BRANCH}
+    mkdir ${BRANCH}_data
+    cd ${BRANCH}_data
+    echo &quot;hello ${BRANCH}&quot; &gt; ${BRANCH}.txt
+    dd if=/dev/urandom of=bat_${BRANCH} bs=1048576 count=10
+    dd if=/dev/urandom of=cat_${BRANCH} bs=1048576 count=10
+    cd ../
+    git add ${BRANCH}_data
+    git commit ${BRANCH}_data -m &quot;adding ${BRANCH}_data&quot;
+
+done
+</code></pre>
+
+<p>The log should now look like the following:</p>
+<pre><code>$ git log --oneline
+2acb13d (branch3) adding branch3_data
+a9473c6 (branch2) adding branch2_data
+bfc1937 (branch1) adding branch1_data
+859fb5d adding rat
+7d104ee adding fat
+ddf2903 adding dat
+765708d adding cat
+4c9f26f adding bat
+3b92007 adding bar.txt
+c2daf61 adding foo.txt
+</code></pre>
+
+<p>Visually, the commit history looks like this:</p>
+<pre><code>$ git lg2
+* 4221760 - 2019-04-09 10:45:30 (branch3)
+|             adding branch3_data - C Reid
+| * b83c9aa - 2019-04-09 10:45:28 (branch2)
+|/            adding branch2_data - C Reid
+| * f30c355 - 2019-04-09 10:45:26 (branch1)
+|/            adding branch1_data - C Reid
+* 859fb5d - 2019-04-09 10:34:19
+|           adding rat - C Reid
+* 7d104ee - 2019-04-09 10:34:19
+|           adding fat - C Reid
+* ddf2903 - 2019-04-09 10:34:18
+|           adding dat - C Reid
+* 765708d - 2019-04-09 10:34:18
+|           adding cat - C Reid
+* 4c9f26f - 2019-04-09 10:34:18
+|           adding bat - C Reid
+* 3b92007 - 2019-04-09 10:33:21
+|           adding bar.txt - C Reid
+* c2daf61 - 2019-04-09 10:33:14
+            adding foo.txt - C Reid
+</code></pre>
+
+<p>Or, drawing it with an ascii art tree:</p>
+<pre><code>o           adding branch3_data
+|
+|   o       adding branch2_data
+|   |
+|   |    o  adding branch1_data
+\   |   /
+ \  |  /
+  \ | /
+   \|/
+    o       adding rat
+    |
+    o       adding fat
+    |
+    o       adding dat
+    |
+    o       adding cat
+    |
+    o       adding bat
+    |
+    o       adding bar.txt
+    |
+    o       adding foo.tx
+    |
+    |
+   [ ] 
+
+</code></pre>
+
+<h1 id="demo-surgery-procedure">demo surgery: procedure</h1>
+<p>In this demo surgery, we will show how to remove two files:</p>
+<ul>
+<li>
+<p>The <code>cat_branch1</code> file, which was only added to branch 1
+  (this is essentially the equivalent procedure to the 
+  single-branch <a href="../easy/">Easy Method</a>.)</p>
+</li>
+<li>
+<p>The <code>cat</code> file, which was added in a commit that is common to
+  multiple branches' commit histories (this is the more complicated case).</p>
+</li>
+</ul>
+<h2 id="git-forget-blob-cat_branch1-branch-specific-history">git forget blob: <code>cat_branch1</code> (branch specific history)</h2>
+<p>We walk through how to remove a file that was only added
+to one branch.</p>
+<p>This procedure is basically equivalent to the
+<a href="../easy/">Easy Method</a>, which deals with a single
+branch. You are rewriting the last bit of the history
+of that one branch. When the old commits are changed
+to new commits, there will not be any other branches
+pointing to the old history, so things are not complicated.</p>
+<p>Start by checking out the branch:</p>
+<pre><code>git checkout branch1
+</code></pre>
+
+<p>Download the git forget blob script:</p>
+<pre><code>wget https://tinyurl.com/git-forget-blob-mac-sh -O git-forget-blob.sh
+chmod +x git-forget-blob.sh
+</code></pre>
+
+<p>Check the size of the <code>.git</code> directory (before):</p>
+<pre><code>$ du -hs .git
+290M    .git
+</code></pre>
+
+<p>Now run the git forget blob script and pass the
+relative path to <code>cat_branch1</code> in the repository:</p>
+<pre><code>$ ./git-forget-blob.sh branch1_data/cat_branch1
+Enumerating objects: 89, done.
+Counting objects: 100% (89/89), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (81/81), done.
+Writing objects: 100% (89/89), done.
+Total 89 (delta 18), reused 0 (delta 0)
+Rewrite f30c3554eb89d764adb91244197dd62b58f10de2 (7/8) (1 seconds passed, remaining 0 predicted)    rm 'branch1_data/cat_branch1'
+
+Ref 'refs/heads/branch1' was rewritten
+Enumerating objects: 43, done.
+Counting objects: 100% (43/43), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (33/33), done.
+Writing objects: 100% (43/43), done.
+Total 43 (delta 7), reused 36 (delta 2)
+</code></pre>
+
+<p>Verify that the file was removed by checking the
+size of the <code>.git</code> directory (after):</p>
+<pre><code>$ du -hs .git
+100M    .git
+</code></pre>
+
+<p>Also check the log to ensure that branch 1 has a new commit
+history, and that no other branches had their histories
+affected:</p>
+<pre><code>$ git lg2
+* 4221760 - 2019-04-09 13:45:30 -0700 (4 hours ago) (branch3)
+|           adding branch3_data - C Reid
+| * b83c9aa - 2019-04-09 13:45:28 -0700 (4 hours ago) (branch2)
+|/            adding branch2_data - C Reid
+| * 70b607b - 2019-04-09 13:45:26 -0700 (4 hours ago) (HEAD -&gt; branch1)
+|/            adding branch1_data - C Reid
+* 859fb5d - 2019-04-09 10:34:19 -0700 (7 hours ago)
+|           adding data2/rat - C Reid
+* 7d104ee - 2019-04-09 10:34:19 -0700 (7 hours ago)
+|           adding data2/fat - C Reid
+* ddf2903 - 2019-04-09 10:34:18 -0700 (7 hours ago)
+|           adding data1/dat - C Reid
+* 765708d - 2019-04-09 10:34:18 -0700 (7 hours ago)
+|           adding data1/cat - C Reid
+* 4c9f26f - 2019-04-09 10:34:18 -0700 (7 hours ago)
+|           adding data1/bat - C Reid
+* 3b92007 - 2019-04-09 10:33:21 -0700 (7 hours ago)
+|           adding bar.txt - C Reid
+* c2daf61 - 2019-04-09 10:33:14 -0700 (7 hours ago)
+            adding foo.txt - C Reid
+</code></pre>
+
+<p>Now that you have rewritten the history of <code>branch1</code>
+and replaced each commit with a new one, you can replace
+the history of the branch on the remote by doing a 
+force-push:</p>
+<pre><code>git push origin master --force
+</code></pre>
+
+<h2 id="git-forget-blob-cat-shared-history">git forget blob: <code>cat</code> (shared history)</h2>
+<p>Now we walk through how to forget <code>cat</code>, a file
+that was added in a commit that is shared between
+two or more branches. </p>
+<p>This case is more complicated, because once we
+rewrite the commit history of branch 1 to forget
+the commit where <code>cat</code> was added, branch 2 and 
+branch 3 still point to the old commit history.</p>
+<p>To fix this, we graft branch 2 and branch 3 from
+the old commit history onto the new commit history,
+by picking two commits that are identical (but that
+have different hashes) and using those as the 
+source and destination of our rebase operation.</p>
+<h3 id="forget-blob-in-one-branch">forget blob in one branch</h3>
+<p>We start by checking on the log (this uses the same
+repo as resulted from rewriting branch 1 only):</p>
+<pre><code>$ git lg2
+* 4221760 - 2019-04-09 13:45:30 -0700 (4 hours ago) (branch3)
+|           adding branch3_data - C Reid
+| * b83c9aa - 2019-04-09 13:45:28 -0700 (4 hours ago) (branch2)
+|/            adding branch2_data - C Reid
+| * 70b607b - 2019-04-09 13:45:26 -0700 (4 hours ago) (HEAD -&gt; branch1)
+|/            adding branch1_data - C Reid
+* 859fb5d - 2019-04-09 10:34:19 -0700 (7 hours ago)
+|           adding data2/rat - C Reid
+* 7d104ee - 2019-04-09 10:34:19 -0700 (7 hours ago)
+|           adding data2/fat - C Reid
+* ddf2903 - 2019-04-09 10:34:18 -0700 (7 hours ago)
+|           adding data1/dat - C Reid
+* 765708d - 2019-04-09 10:34:18 -0700 (7 hours ago)
+|           adding data1/cat - C Reid
+* 4c9f26f - 2019-04-09 10:34:18 -0700 (7 hours ago)
+|           adding data1/bat - C Reid
+* 3b92007 - 2019-04-09 10:33:21 -0700 (7 hours ago)
+|           adding bar.txt - C Reid
+* c2daf61 - 2019-04-09 10:33:14 -0700 (7 hours ago)
+            adding foo.txt - C Reid
+</code></pre>
+
+<p>We start by removing the large file <code>cat</code> from one
+of the branches, then rebase the other branches onto
+the new history that is created.</p>
+<p>Here, we remove the file <code>cat</code> from branch 2, and rebase
+branches 1 and 3 onto it.</p>
+<p>Start by checking out the branch, and checking on the
+size of the .git folder:</p>
+<pre><code>git checkout branch2
+</code></pre>
+
+<pre><code>$ du -hs .git
+100M    .git
+</code></pre>
+
+<p>Now we run the forget blob script:</p>
+<pre><code>$ ./git-forget-blob.sh data1/cat
+Enumerating objects: 43, done.
+Counting objects: 100% (43/43), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (43/43), done.
+Total 43 (delta 7), reused 43 (delta 7)
+Rewrite 765708d262678c2bbc15dd5b999863ad5a4dab01 (4/8) (0 seconds passed, remaining 0 predicted)    rm 'data1/cat'
+Rewrite ddf2903c6d1fe41b171af7764579bc4d6a63e70f (5/8) (0 seconds passed, remaining 0 predicted)    rm 'data1/cat'
+Rewrite 7d104ee90da6b3adf08f9a86d2342e3c8690dc64 (6/8) (0 seconds passed, remaining 0 predicted)    rm 'data1/cat'
+Rewrite 859fb5d7db420b8aa745c50162b71c20331e90a9 (7/8) (0 seconds passed, remaining 0 predicted)    rm 'data1/cat'
+Rewrite b83c9aaecf238324aa2b8a51da1ac7f69015d4d4 (8/8) (0 seconds passed, remaining 0 predicted)    rm 'data1/cat'
+
+Ref 'refs/heads/branch2' was rewritten
+Enumerating objects: 51, done.
+Counting objects: 100% (51/51), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (51/51), done.
+Total 51 (delta 9), reused 40 (delta 5)
+</code></pre>
+
+<p>Check the size of the <code>.git</code> directory:</p>
+<pre><code>$ du -hs .git
+100M    .git
+</code></pre>
+
+<p>It did not change! We can see why when we check the log:</p>
+<pre><code>$ git lg1
+* 4221760 - (4 hours ago) adding branch3_data - C Reid (branch3)
+| * 5e2b657 - (4 hours ago) adding branch2_data - C Reid (HEAD -&gt; branch2)
+| * 6ec8be5 - (7 hours ago) adding data2/rat - C Reid
+| * 15ec3be - (7 hours ago) adding data2/fat - C Reid
+| * 03a671e - (7 hours ago) adding data1/dat - C Reid
+| * 3cda75c - (7 hours ago) adding data1/cat - C Reid
+| | * 70b607b - (4 hours ago) adding branch1_data - C Reid (branch1)
+| |/
+|/|
+* | 859fb5d - (7 hours ago) adding data2/rat - C Reid
+* | 7d104ee - (7 hours ago) adding data2/fat - C Reid
+* | ddf2903 - (7 hours ago) adding data1/dat - C Reid
+* | 765708d - (7 hours ago) adding data1/cat - C Reid
+|/
+* 4c9f26f - (7 hours ago) adding data1/bat - C Reid
+* 3b92007 - (7 hours ago) adding bar.txt - C Reid
+* c2daf61 - (7 hours ago) adding foo.txt - C Reid
+
+</code></pre>
+
+<p>branch 1 and branch 3 still refer to the old commit that added <code>cat</code>,
+so the full contents of the <code>cat</code> file are still in the <code>.git</code> directory's
+blobs. </p>
+<p>Now that branch 2 has a new version of the shared history,
+we want to rebase branch 1 and branch 3.</p>
+<h3 id="prepare-for-rebase-by-tagging-commits">prepare for rebase by tagging commits</h3>
+<p>Start the rebase operation for the remaining branches by
+labeling our rebase source and destination commits. As
+shown in the ascii art diagrams at the top of the page,
+we want to find the last commit that our branches shared
+in common in their commit history, and mark that commit
+in the old history as the "rebase source" and mark that
+commit in the new history as the "rebase destination".</p>
+<p>In the case of our example, the commit that adds the file
+<code>rat</code> is the last commit all our branches have in common.</p>
+<p>This means that the rebase source will be the version of 
+the "adding rat" commit that is in the old history (the 
+history of branch 1 and branch 3) - commit <code>859fb5d</code>.</p>
+<p>The rebase destination will be the version of the "adding
+rat" commit that is in the new history of branch 2,
+which corresponds to commit <code>6ec8be5</code>.</p>
+<p>Mark these two commits as the <code>rebase_src</code> and <code>rebase_dest</code>
+branches:</p>
+<pre><code>git checkout 859fb5d
+git checkout -b rebase_src
+
+git checkout 6ec8be5
+git checkout -b rebase_dest
+</code></pre>
+
+<p>Now here is the state of the repo:</p>
+<pre><code>$ git lg1
+* 4221760 - (5 hours ago) adding branch3_data - C Reid (branch3)
+| * 5e2b657 - (5 hours ago) adding branch2_data - C Reid (branch2)
+| * 6ec8be5 - (8 hours ago) adding data2/rat - C Reid (HEAD -&gt; rebase_dest)
+| * 15ec3be - (8 hours ago) adding data2/fat - C Reid
+| * 03a671e - (8 hours ago) adding data1/dat - C Reid
+| * 3cda75c - (8 hours ago) adding data1/cat - C Reid
+| | * 70b607b - (5 hours ago) adding branch1_data - C Reid (branch1)
+| |/
+|/|
+* | 859fb5d - (8 hours ago) adding data2/rat - C Reid (rebase_src)
+* | 7d104ee - (8 hours ago) adding data2/fat - C Reid
+* | ddf2903 - (8 hours ago) adding data1/dat - C Reid
+* | 765708d - (8 hours ago) adding data1/cat - C Reid
+|/
+* 4c9f26f - (8 hours ago) adding data1/bat - C Reid
+* 3b92007 - (8 hours ago) adding bar.txt - C Reid
+* c2daf61 - (8 hours ago) adding foo.txt - C Reid
+</code></pre>
+
+<h3 id="perform-rebase-operation">perform rebase operation</h3>
+<p>Start the rebase operation by checking out branch 2:</p>
+<pre><code>git checkout branch2
+</code></pre>
+
+<p>Now rebase branch 1 from the old history onto the new history:</p>
+<pre><code>git rebase --onto rebase_dest rebase_src branch1
+</code></pre>
+
+<p>You should see output like this:</p>
+<pre><code>First, rewinding head to replay your work on top of it...
+Applying: adding branch1_data
+</code></pre>
+
+<p>Verify that branch 1 and branch 2 now share a commit history:</p>
+<pre><code>$ git lg1
+* 2af1225 - (5 hours ago) adding branch1_data - C Reid (HEAD -&gt; branch1)
+| * 4221760 - (5 hours ago) adding branch3_data - C Reid (branch3)
+| * 859fb5d - (8 hours ago) adding data2/rat - C Reid (rebase_src)
+| * 7d104ee - (8 hours ago) adding data2/fat - C Reid
+| * ddf2903 - (8 hours ago) adding data1/dat - C Reid
+| * 765708d - (8 hours ago) adding data1/cat - C Reid
+| | * 5e2b657 - (5 hours ago) adding branch2_data - C Reid (branch2)
+| |/
+|/|
+* | 6ec8be5 - (8 hours ago) adding data2/rat - C Reid (rebase_dest)
+* | 15ec3be - (8 hours ago) adding data2/fat - C Reid
+* | 03a671e - (8 hours ago) adding data1/dat - C Reid
+* | 3cda75c - (8 hours ago) adding data1/cat - C Reid
+|/
+* 4c9f26f - (8 hours ago) adding data1/bat - C Reid
+* 3b92007 - (8 hours ago) adding bar.txt - C Reid
+* c2daf61 - (8 hours ago) adding foo.txt - C Reid
+</code></pre>
+
+<p>Repeat the process with branch 3:</p>
+<pre><code>git rebase --onto rebase_dest rebase_src branch3
+</code></pre>
+
+<p>You will see output like this:</p>
+<pre><code>First, rewinding head to replay your work on top of it...
+Applying: adding branch3_data
+</code></pre>
+
+<p>Verify that all three branches now share a commit history:</p>
+<pre><code>$ git lg1
+* b5642eb - (5 hours ago) adding branch3_data - C Reid (HEAD -&gt; branch3)
+| * 2af1225 - (5 hours ago) adding branch1_data - C Reid (branch1)
+|/
+| * 5e2b657 - (5 hours ago) adding branch2_data - C Reid (branch2)
+|/
+* 6ec8be5 - (8 hours ago) adding data2/rat - C Reid (rebase_dest)
+* 15ec3be - (8 hours ago) adding data2/fat - C Reid
+* 03a671e - (8 hours ago) adding data1/dat - C Reid
+* 3cda75c - (8 hours ago) adding data1/cat - C Reid
+| * 859fb5d - (8 hours ago) adding data2/rat - C Reid (rebase_src)
+| * 7d104ee - (8 hours ago) adding data2/fat - C Reid
+| * ddf2903 - (8 hours ago) adding data1/dat - C Reid
+| * 765708d - (8 hours ago) adding data1/cat - C Reid
+|/
+* 4c9f26f - (8 hours ago) adding data1/bat - C Reid
+* 3b92007 - (8 hours ago) adding bar.txt - C Reid
+* c2daf61 - (8 hours ago) adding foo.txt - C Reid
+</code></pre>
+
+<p>Last, delete the rebase source and destination branches, so nothing points
+at the problematic commits or the old history:</p>
+<pre><code>git branch -D rebase_src rebase_dest
+</code></pre>
+
+<p>Check the log to make sure we only see the new history:</p>
+<pre><code>$ git lg1
+* b5642eb - (5 hours ago) adding branch3_data - C Reid (HEAD -&gt; branch3)
+| * 2af1225 - (5 hours ago) adding branch1_data - C Reid (branch1)
+|/
+| * 5e2b657 - (5 hours ago) adding branch2_data - C Reid (branch2)
+|/
+* 6ec8be5 - (8 hours ago) adding data2/rat - C Reid (rebase_dest)
+* 15ec3be - (8 hours ago) adding data2/fat - C Reid
+* 03a671e - (8 hours ago) adding data1/dat - C Reid
+* 3cda75c - (8 hours ago) adding data1/cat - C Reid
+* 4c9f26f - (8 hours ago) adding data1/bat - C Reid
+* 3b92007 - (8 hours ago) adding bar.txt - C Reid
+* c2daf61 - (8 hours ago) adding foo.txt - C Reid
+</code></pre>
+
+<p>Congratulations, you've completed a multi-branch git-commit-ectomy!</p>
+<h2 id="stitch-the-patient-back-up">stitch the patient back up</h2>
+<p>As with all surgeries, the last step is just as 
+important as the first.</p>
+<p>All of the blobs for the old commits have been erased
+from the <code>.git</code> directory and we're ready to push
+the new, slimmer, rewritten history to the remote.</p>
+<p>But as before, we <em>must</em> do a force push, otherwise
+both histories will be kept. To force push:</p>
+<pre><code>git push origin master --force
+</code></pre>
+
+<h1 id="tips-for-surgery">tips for surgery</h1>
+<p><strong>Size up your patient before you start.</strong></p>
+<p>Use the one-liner in the <a href="#consult-with-your-doctor">"Consult with your Doctor" 
+section</a>
+to size up your patient before you start.</p>
+<p><strong>Get your patient some insurance.</strong> </p>
+<p>Back up any files you want to remove but still want to keep.</p>
+<p><strong>Make sure you specify relative paths to file names.</strong> </p>
+<p>The <code>git-forget-blob.sh</code> script requires you to specify the
+path to the file you want to remove, <em>relative to the top
+level directory of the repository</em>.</p>
+<p>Like this:</p>
+<pre><code># CORRECT
+./git-forget-blob.sh data/my_project/phase-1/proprietary/super_huge.file
+</code></pre>
+
+<p>Not like this:</p>
+<pre><code># INCORRECT
+./git-forget-blob.sh super_huge.file
+</code></pre>
+
+<p>The long one-liner in the <a href="#consult-with-your-doctor">"Consult with your Doctor" 
+section</a>
+will list the largest files in the repository, with the relative
+path to that file (relative to the root of the repository).</p>
+<p>If you pass it a filename without a path to the file,
+the script will most likely complain that the file could
+not be found. But it may attempt to remove the file and 
+rewrite history <em>anyway</em> without removing any files.</p>
+<p>If you are running <code>git-forget-blob.sh</code> and the size of the 
+<code>.git</code> folder is not going down, it may be because you are
+specifying an incorrect path to the files you are trying to 
+remove.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../easy/" title="Git-Commit-Ectomy the Easy Way: Single Branch" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Git-Commit-Ectomy the Easy Way: Single Branch
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../transplant/" title="Performing Transplants with Patch" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Performing Transplants with Patch
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 <a href="https://charlesreid1.com">Charles Reid</a>, released under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-clause license</a>
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.e72fd936.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

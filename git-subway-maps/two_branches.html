@@ -1,0 +1,44 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Git Map</title>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery.subwayMap-0.5.0.js"></script>
+    <link href="subway.css" rel="stylesheet">
+    <link href="two_branches.css" rel="stylesheet">
+</head>
+<body>
+    <div class="subway-map" data-columns="10" data-rows="5" data-cellSize="60"
+        data-legendId="legend" data-textClass="text" data-gridNumbers="true"
+        data-grid="false" data-lineWidth="8">
+
+        <ul data-color="#aced00" data-label="master">
+            <li data-coords="2,3" data-labelPos="W" data-marker="interchange">c384c87</li>  
+            <li data-coords="3,2" data-dir="N">57de4f4</li>
+            <li data-coords="4,2" data-dir="E">2576472</li>
+            <li data-coords="5,2">13c4011</li>
+            <li data-coords="6,2">f5cede7</li>
+            <li data-coords="7,2">3f79bc0</li>
+            <li data-coords="8,2">64ca124</li>
+            <li data-coords="9,2" data-labelPos="E">c047ced</li>
+        </ul>
+
+        <ul data-color="#00aced" data-label="development">
+            <li data-coords="2,3" data-marker="interchange"></li>
+            <li data-coords="3,4" data-dir="S">15343a2</li>
+            <li data-coords="4,4" data-dir="E">e6fa816</li>
+            <li data-coords="5,4">874b8ba</li>
+            <li data-coords="6,4">ee3d025</li>
+            <li data-coords="7,4">3e822fe</li>
+            <li data-coords="8,4">a6c2089</li>
+            <li data-coords="9,4" data-labelPos="E">9cd4434</li>
+            <!--
+                Any additional stations will get cut off on the right side
+            -->
+        </ul>
+    </div>
+    <div id="legend"></div>
+    <script type="text/javascript">
+        $(".subway-map").subwayMap({ debug: true });
+    </script>
+</body>
+</html>

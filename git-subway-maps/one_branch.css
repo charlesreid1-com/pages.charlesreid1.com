@@ -1,0 +1,14 @@
+/**
+ * These styles are for one-branch maps.
+ */
+.subway-map
+{
+    margin: 0;
+    width: 500px;
+    height:200px;
+    background-color: white;
+}
+
+div#legend {
+    margin-left: 50px;
+}
