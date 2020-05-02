@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-2.7.2">
     
     
       
@@ -85,7 +85,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="the wisko manual" class="md-header-nav__button md-logo">
+        <a href="" title="the wisko manual" class="md-header-nav__button md-logo">
           
             <i class="md-icon">cloud</i>
           
@@ -172,7 +172,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Index" class="md-nav__link">
+    <a href="" title="Index" class="md-nav__link">
       Index
     </a>
   </li>
@@ -184,7 +184,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../boot2root/" title="Wisko Boot to Root" class="md-nav__link">
+    <a href="boot2root/" title="Wisko Boot to Root" class="md-nav__link">
       Wisko Boot to Root
     </a>
   </li>
@@ -196,7 +196,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../faq/" title="Wisko FAQ" class="md-nav__link">
+    <a href="faq/" title="Wisko FAQ" class="md-nav__link">
       Wisko FAQ
     </a>
   </li>
@@ -208,7 +208,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../locked-out/" title="Locked Out of Wisko" class="md-nav__link">
+    <a href="locked-out/" title="Locked Out of Wisko" class="md-nav__link">
       Locked Out of Wisko
     </a>
   </li>
@@ -220,7 +220,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../smallmelo-migration-1/" title="smallmelo.com Migration: Part 1" class="md-nav__link">
+    <a href="smallmelo-migration-1/" title="smallmelo.com Migration: Part 1" class="md-nav__link">
       smallmelo.com Migration: Part 1
     </a>
   </li>
@@ -232,7 +232,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../smallmelo-migration-2/" title="smallmelo.com Migration: Part 2" class="md-nav__link">
+    <a href="smallmelo-migration-2/" title="smallmelo.com Migration: Part 2" class="md-nav__link">
       smallmelo.com Migration: Part 2
     </a>
   </li>
@@ -244,7 +244,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../smallmelo-migration-3/" title="smallmelo.com Migration: Part 3" class="md-nav__link">
+    <a href="smallmelo-migration-3/" title="smallmelo.com Migration: Part 3" class="md-nav__link">
       smallmelo.com Migration: Part 3
     </a>
   </li>
@@ -268,7 +268,7 @@
         Wisko Gitea
       </label>
     
-    <a href="./" title="Wisko Gitea" class="md-nav__link md-nav__link--active">
+    <a href="wisko-gitea/" title="Wisko Gitea" class="md-nav__link md-nav__link--active">
       Wisko Gitea
     </a>
     
@@ -415,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../geoserver-https/" title="Connecting to Geoserver Over HTTPS" class="md-nav__link">
+    <a href="geoserver-https/" title="Connecting to Geoserver Over HTTPS" class="md-nav__link">
       Connecting to Geoserver Over HTTPS
     </a>
   </li>
@@ -576,7 +576,7 @@
                 
                 <h1 id="wisko-gitea">wisko gitea</h1>
 <h2 id="before-you-begin-gitea-setup-info">before you begin: gitea setup info</h2>
-<p>(see <a href="../boot2root/">boot to root</a> for details on how gitea was set up).</p>
+<p>(see <a href="https://hackmd.io/s/BkfqUw0wz">wisko setup</a> for details on how gitea was set up).</p>
 <h3 id="where-is-gitea">where is gitea</h3>
 <p>The wisko gitea instance is installed to <code>$GOPATH/src/code.gitea.io/gitea</code> and there is a symlink to this directory at <code>~/gitea</code>.</p>
 <p>This directory is actually a cloned git repo, so you can see what files you've modified from the default by running a <code>git status</code>.</p>
@@ -597,10 +597,10 @@
 <p>which should return 1.7.5.</p>
 <h2 id="task-summary">task summary</h2>
 <p>Making gitea available via the subdomain <code>git.smallmelo.com</code> requires setting up a couple of components:
-<em> subdomain
-</em> web server to handle redirects
-<em> gitea configuration to tell gitea where it is hosted
-</em> https certificates valid for the subdomain</p>
+* subdomain
+* web server to handle redirects
+* gitea configuration to tell gitea where it is hosted
+* https certificates valid for the subdomain</p>
 <h2 id="set-up-git-subdomain">set up git subdomain</h2>
 <p>First thing is, we need to set up the subdomain <code>git.smallmelo.com</code> to redirect to the server. This depends on the hosting provider, but should be an A Name Record:</p>
 <p><strong>A Record</strong>:</p>
@@ -765,7 +765,7 @@ ROOT_URL = %(PROTOCOL)s://%(DOMAIN)s/
 ./gitea web
 </code></pre>
 
-<p>(or, do it in a screen, <a href="../boot2root/">as mentioned in the wisko boot to root doc</a>).</p>
+<p>(or, do it in a screen, <a href="https://hackmd.io/s/BkfqUw0wz#Installing-Gitea">as mentioned in the wisko setup doc</a>).</p>
 <h2 id="https-certs">https certs</h2>
 <p>See the above modifications to the document about certificates. A new SSL certificate for the git subdomain (<code>git.smallmelo.com</code>) was needed, so we used certbot to make it.</p>
 <p>To explain the HTTPS certificate setup for git.smallmelo.com a bit more:</p>
@@ -797,7 +797,7 @@ ROOT_URL = %(PROTOCOL)s://%(DOMAIN)s/
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../smallmelo-migration-3/" title="smallmelo.com Migration: Part 3" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="smallmelo-migration-3/" title="smallmelo.com Migration: Part 3" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -812,7 +812,7 @@ ROOT_URL = %(PROTOCOL)s://%(DOMAIN)s/
           </a>
         
         
-          <a href="../geoserver-https/" title="Connecting to Geoserver Over HTTPS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="geoserver-https/" title="Connecting to Geoserver Over HTTPS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
@@ -833,10 +833,6 @@ ROOT_URL = %(PROTOCOL)s://%(DOMAIN)s/
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-          <div class="md-footer-copyright__highlight">
-            Copyright 2018 Charles Reid
-          </div>
-        
         powered by
         <a href="http://www.mkdocs.org">MkDocs</a>
         and
@@ -854,11 +850,9 @@ ROOT_URL = %(PROTOCOL)s://%(DOMAIN)s/
     
       <script src="../assets/javascripts/application.0cf9b500.js"></script>
       
-      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
-        <script src="../search/require.js"></script>
-      
-        <script src="../search/search.js"></script>
+        <script src="../search/main.js"></script>
       
     
     

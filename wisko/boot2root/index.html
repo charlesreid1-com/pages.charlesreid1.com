@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-2.7.2">
     
     
       
@@ -85,7 +85,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="the wisko manual" class="md-header-nav__button md-logo">
+        <a href="" title="the wisko manual" class="md-header-nav__button md-logo">
           
             <i class="md-icon">cloud</i>
           
@@ -172,7 +172,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Index" class="md-nav__link">
+    <a href="" title="Index" class="md-nav__link">
       Index
     </a>
   </li>
@@ -196,7 +196,7 @@
         Wisko Boot to Root
       </label>
     
-    <a href="./" title="Wisko Boot to Root" class="md-nav__link md-nav__link--active">
+    <a href="boot2root/" title="Wisko Boot to Root" class="md-nav__link md-nav__link--active">
       Wisko Boot to Root
     </a>
     
@@ -391,7 +391,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../faq/" title="Wisko FAQ" class="md-nav__link">
+    <a href="faq/" title="Wisko FAQ" class="md-nav__link">
       Wisko FAQ
     </a>
   </li>
@@ -403,7 +403,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../locked-out/" title="Locked Out of Wisko" class="md-nav__link">
+    <a href="locked-out/" title="Locked Out of Wisko" class="md-nav__link">
       Locked Out of Wisko
     </a>
   </li>
@@ -415,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../smallmelo-migration-1/" title="smallmelo.com Migration: Part 1" class="md-nav__link">
+    <a href="smallmelo-migration-1/" title="smallmelo.com Migration: Part 1" class="md-nav__link">
       smallmelo.com Migration: Part 1
     </a>
   </li>
@@ -427,7 +427,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../smallmelo-migration-2/" title="smallmelo.com Migration: Part 2" class="md-nav__link">
+    <a href="smallmelo-migration-2/" title="smallmelo.com Migration: Part 2" class="md-nav__link">
       smallmelo.com Migration: Part 2
     </a>
   </li>
@@ -439,7 +439,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../smallmelo-migration-3/" title="smallmelo.com Migration: Part 3" class="md-nav__link">
+    <a href="smallmelo-migration-3/" title="smallmelo.com Migration: Part 3" class="md-nav__link">
       smallmelo.com Migration: Part 3
     </a>
   </li>
@@ -451,7 +451,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../wisko-gitea/" title="Wisko Gitea" class="md-nav__link">
+    <a href="wisko-gitea/" title="Wisko Gitea" class="md-nav__link">
       Wisko Gitea
     </a>
   </li>
@@ -463,7 +463,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../geoserver-https/" title="Connecting to Geoserver Over HTTPS" class="md-nav__link">
+    <a href="geoserver-https/" title="Connecting to Geoserver Over HTTPS" class="md-nav__link">
       Connecting to Geoserver Over HTTPS
     </a>
   </li>
@@ -674,8 +674,8 @@
 <h2 id="getting-to-a-shell">Getting to a Shell</h2>
 <h3 id="hardware">Hardware</h3>
 <p>wisko is a higher-end 1-CPU Digital Ocean droplet.
-<em> 1 CPU
-</em> 50 GB SSD
+* 1 CPU
+* 50 GB SSD
 * 2 GB RAM</p>
 <p>IP address: 159.65.75.41</p>
 <h3 id="spin-up-hardware">Spin Up Hardware</h3>
@@ -693,11 +693,11 @@
 <h3 id="set-dns-records">Set DNS Records</h3>
 <p>Add the following DNS records:</p>
 <p><strong>A Record</strong>:
-<em> Record: none (set to @ automatically)
-</em> Value: 138.68.10.168</p>
+* Record: none (set to @ automatically)
+* Value: 138.68.10.168</p>
 <p><strong>A Record</strong>:
-<em> Record: git
-</em> Value: 138.68.10.168</p>
+* Record: git
+* Value: 138.68.10.168</p>
 <p><strong>CNAME Record</strong>:
 * Record: </p>
 <h3 id="connect-to-droplet">Connect to Droplet</h3>
@@ -862,12 +862,12 @@ mysql&gt; GRANT ALL PRIVILEGES ON wordpress.* TO &quot;wpsql&quot;@&quot;localho
 </code></pre>
 
 <p>Edit <code>wp-config.php</code> and change the following:
-<em> DB_NAME
-</em> DB_USER
-<em> DB_PASSWORD
-</em> DB_HOST
-<em> DB_CHARSET
-</em> DB_COLLATE</p>
+* DB_NAME
+* DB_USER
+* DB_PASSWORD
+* DB_HOST
+* DB_CHARSET
+* DB_COLLATE</p>
 <p>Use <a href="https://api.wordpress.org/secret-key/1.1/salt/">online secret generator</a> to set secret key values.</p>
 <p>Now move the wordpress folder to your web root:</p>
 <pre><code>mv wordpress /var/www/htdocs/wordpress/
@@ -1019,7 +1019,7 @@ make: *** [gitea] Error 1
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1034,7 +1034,7 @@ make: *** [gitea] Error 1
           </a>
         
         
-          <a href="../faq/" title="Wisko FAQ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="faq/" title="Wisko FAQ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1055,10 +1055,6 @@ make: *** [gitea] Error 1
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-          <div class="md-footer-copyright__highlight">
-            Copyright 2018 Charles Reid
-          </div>
-        
         powered by
         <a href="http://www.mkdocs.org">MkDocs</a>
         and
@@ -1076,11 +1072,9 @@ make: *** [gitea] Error 1
     
       <script src="../assets/javascripts/application.0cf9b500.js"></script>
       
-      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
-        <script src="../search/require.js"></script>
-      
-        <script src="../search/search.js"></script>
+        <script src="../search/main.js"></script>
       
     
     
