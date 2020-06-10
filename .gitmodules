@@ -1,0 +1,72 @@
+[submodule "b-captain-hook"]
+	path = b-captain-hook
+	url = https://github.com/charlesreid1/b-captain-hook.git
+[submodule "dont-sudo-pip"]
+	path = dont-sudo-pip
+	url = https://github.com/charlesreid1/dont-sudo-pip
+[submodule "git-commit-ectomy"]
+	path = git-commit-ectomy
+	url = https://github.com/charlesreid1/git-commit-ectomy
+[submodule "git-subway-maps"]
+	path = git-subway-maps
+	url = https://github.com/charlesreid1/git-subway-maps
+[submodule "github-heroku-attack-rabbits"]
+	path = github-heroku-attack-rabbits
+	url = https://github.com/charlesreid1/github-heroku-attack-rabbits
+[submodule "how-do-i-pandoc"]
+	path = how-do-i-pandoc
+	url = https://github.com/charlesreid1/how-do-i-pandoc
+[submodule "how-do-i-pelican"]
+	path = how-do-i-pelican
+	url = https://github.com/charlesreid1/how-do-i-pelican
+[submodule "how-do-i-pyenv"]
+	path = how-do-i-pyenv
+	url = https://github.com/charlesreid1/how-do-i-pyenv
+[submodule "how-do-i-snakemake"]
+	path = how-do-i-snakemake
+	url = https://github.com/charlesreid1/how-do-i-snakemake
+[submodule "scurvy-knave-theme"]
+	path = scurvy-knave-theme
+	url = https://github.com/charlesreid1/scurvy-knave-theme
+[submodule "translate-yer-docs"]
+	path = translate-yer-docs
+	url = https://github.com/charlesreid1/translate-yer-docs
+[submodule "charlesreid1-ansible"]
+	path = charlesreid1-ansible
+	url = https://github.com/charlesreid1-com/charlesreid1-ansible
+[submodule "d-gitea"]
+	path = d-gitea
+	url = https://github.com/charlesreid1-docker/d-gitea
+[submodule "d-mediawiki"]
+	path = d-mediawiki
+	url = https://github.com/charlesreid1-docker/d-mediawiki
+[submodule "d-mysql"]
+	path = d-mysql
+	url = https://github.com/charlesreid1-docker/d-mysql
+[submodule "d-nginx-charlesreid1"]
+	path = d-nginx-charlesreid1
+	url = https://github.com/charlesreid1-docker/d-nginx-charlesreid1
+[submodule "d-nginx-subdomains"]
+	path = d-nginx-subdomains
+	url = https://github.com/charlesreid1-docker/d-nginx-subdomains
+[submodule "d-phpmyadmin"]
+	path = d-phpmyadmin
+	url = https://github.com/charlesreid1-docker/d-phpmyadmin
+[submodule "d-python-files"]
+	path = d-python-files
+	url = https://github.com/charlesreid1-docker/d-python-files
+[submodule "d-python-helium"]
+	path = d-python-helium
+	url = https://github.com/charlesreid1-docker/d-python-helium
+[submodule "pod-charlesreid1"]
+	path = pod-charlesreid1
+	url = https://github.com/charlesreid1-docker/pod-charlesreid1
+[submodule "boring-mind-machine"]
+	path = boring-mind-machine
+	url = https://github.com/rainbow-mind-machine/boring-mind-machine.git
+[submodule "embarcadero-mind-machine"]
+	path = embarcadero-mind-machine
+	url = https://github.com/rainbow-mind-machine/embarcadero-mind-machine.git
+[submodule "rainbow-mind-machine"]
+	path = rainbow-mind-machine
+	url = https://github.com/rainbow-mind-machine/rainbow-mind-machine.git
