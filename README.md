@@ -1,39 +1,65 @@
 # pages.charlesreid1.com
 
-This is a simple single-page static landing page for 
-the subdomain `pages.charlesreid1.com`.
+This repo contains files for creating the static page at pages.charlesreid1.com.
 
-The pages subdomain consists of repositories 
-with a pages webhook - that is, a webhook 
-that will deploy the `gh-pages` branch
-of that repository as a page at
+This repo also serves static content from several other repositories, via submodules
+in the `gh-pages` branch.
+
+## TOC
+
+* branches
+* submodules in gh-pages branch
+* pages.charlesreid1.com static site
+* generic pelican information
+* make site
+* modify content
+* set up push to github pages
+
+## Branches
+
+The `master` branch contains the files needed to generate pages.charlesreid1.com.
+
+The `gh-pages` branch contains the generated pages.charlesreid1.com page, as well as
+several git submodules that point to other `gh-pages` branches of other repositories.
+
+## Submodules in gh-pages branch
+
+Submodules make it easier to update the content of other repos.
+
+Github Pages transparently serves up other repos' `gh-pages` branches.
+This includes repos that have CNAME records created for them.
+
+So a submodule that lives on the `gh-pages` branch at `project-name` and points to
+the `gh-pages` branch of `org-name/project-name`, the `gh-pages` branch of `project-name`
+will be served up via the following URL:
 
 ```
-pages.charlesreid1.com/repo-name
+pages.charlesreid1.com/project-name
 ```
 
-This utilizes a webhook listener (see [b-captain-hook](https://git.charlesreid1.com/bots/b-captain-hook))
-to listen for commits to particular repositories.
-While not as streamlined as Github Pages 
-(i.e., you still have to manually add a 
-webhook to each repo you want to build a site for),
-it provides a convenient, self-hosted alternative
-to Github Pages.
+where `pages.charlesreid1.com` points to the `gh-pages` branch of this repo,
+and `pages.charlesreid1.com/project-name` points to the `gh-pages` branch of the
+`project-name` repo.
+
+## pages.charlesreid1.com static site
 
 This page uses a single-page Pelican theme to generate static content. 
 
-Below, we cover:
+The sections below cover how to generate the content of the static site
+using Pelican.
 
-* Generic Pelican Information
-* Pages Subdomain Information
-    * Setting up the webhook
-    * Deploying the pages
-    * Docker container with python web server
-    * Reverse proxy with nginx
+## Generic Pelican Information
 
-# Generic Pelican Information
+### Quick Start
 
-## Required Software
+Clone the repo to get started
+
+```
+git clone https://github.com/charlesreid1-com/pages.charlesreid1.com
+cd pages.charlesreid1.com
+```
+
+### Required Software
 
 To install Pelican:
 
@@ -42,11 +68,15 @@ pip install Markdown
 pip install pelican
 ```
 
+This uses the scurvy knave pelican theme. To install this theme,
+see <https://github.com/charlesreid1/scurvy-knave-theme>.
+
 ## Make Site
 
-To make the Pelican site:
+To make the Pelican site, starting at the repository root:
 
 ```
+cd pelican/
 pelican content
 cd output/
 python -m http.server 8080
@@ -61,10 +91,12 @@ to customize the page content, so there is no content to edit in `content/`.
 
 ## Set Up Push to Github Pages
 
-Start by cloning a copy of the repo at output (a repo within a repo):
+Start by cloning a copy of the repo at the `output/` directory in the `pelican` folder of the repo.
+We will make a brand new branch called `gh-pages` that shares no history or commits
+with any other branches (orphan branch):
 
 ```
-git clone https://git.charlesreid1.com/charlesreid1/hooks.charlesreid1.com output/
+git clone https://github.com/charlesreid1-com/pages.charlesreid1.com output/
 cd output/
 git checkout --orphan gh-pages
 cd ../
